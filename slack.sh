@@ -14,6 +14,6 @@ else
 fi
 
 message="$@"
-payload="payload={\"channel\": \"#koizumi_zabbix_aws\", \"username\": \"zabbix_bot_chan\", \"text\": \"${message}\", \"icon_emoji\": \"${emoji}\"}"
+payload="payload={\"channel\": \"${CHANNEL}\", \"username\": \"zabbix_bot_chan\", \"text\": \"${message}\", \"icon_emoji\": \"${emoji}\"}"
 
 curl -m 5 --data "${payload}" ${WEBHOOK_URL}
